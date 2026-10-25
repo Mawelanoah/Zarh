@@ -8,6 +8,52 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+
+  // Dark mode
+  const themeToggle = document.getElementById("themeToggle");
+  const themeColorMeta = document.getElementById("themeColor");
+  const THEME_KEY = "zarh-theme";
+
+  function applyTheme(theme) {
+    const isDark = theme === "dark";
+    document.documentElement.classList.toggle("dark", isDark);
+    if (themeToggle) {
+      themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+      themeToggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+    }
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute("content", isDark ? "#16121c" : "#4a2c5a");
+    }
+  }
+
+  function getPreferredTheme() {
+    const stored = localStorage.getItem(THEME_KEY);
+    if (stored === "dark" || stored === "light") return stored;
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  }
+
+  applyTheme(getPreferredTheme());
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const next = document.documentElement.classList.contains("dark") ? "light" : "dark";
+      localStorage.setItem(THEME_KEY, next);
+      applyTheme(next);
+    });
+  }
+
+  if (window.matchMedia) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+      if (!localStorage.getItem(THEME_KEY)) {
+        applyTheme(e.matches ? "dark" : "light");
+      }
+    });
+  }
+
+
   const menuToggle = document.getElementById("menuToggle");
   const mainNav = document.getElementById("mainNav");
   if (menuToggle && mainNav) {
