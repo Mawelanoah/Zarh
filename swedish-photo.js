@@ -5,10 +5,9 @@
       img.src = src;
     });
   }
-  Promise.all([
-    fetch("swedish-a.b64").then(function (r) { return r.text(); }),
-    fetch("swedish-b.b64").then(function (r) { return r.text(); })
-  ]).then(function (parts) {
-    apply("data:image/jpeg;base64," + (parts[0] + parts[1]).trim());
+  Promise.all([0,1,2,3].map(function (i) {
+    return fetch("swedish-" + i + ".b64").then(function (r) { return r.text(); });
+  })).then(function (parts) {
+    apply("data:image/jpeg;base64," + parts.join("").trim());
   }).catch(function () {});
 })();
