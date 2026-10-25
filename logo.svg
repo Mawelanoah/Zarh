@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 460" width="400" height="460" role="img" aria-label="Zarh Wellness Lounge logo">
+  <rect width="400" height="460" fill="transparent"/>
+  <circle cx="200" cy="155" r="115" fill="none" stroke="#4a2c5a" stroke-width="3.2"/>
+  <circle cx="200" cy="155" r="105" fill="none" stroke="#c9a96e" stroke-width="1.4"/>
+  <circle cx="80" cy="155" r="3.2" fill="#c9a96e"/>
+  <circle cx="320" cy="155" r="3.2" fill="#c9a96e"/>
+  <g fill="none" stroke="#b894c9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+    <path d="M200 200 C182 185 168 160 175 135 C182 115 198 122 200 145"/>
+    <path d="M200 200 C218 185 232 160 225 135 C218 115 202 122 200 145"/>
+    <path d="M200 200 C175 192 155 172 160 148 C165 128 188 132 198 155"/>
+    <path d="M200 200 C225 192 245 172 240 148 C235 128 212 132 202 155"/>
+    <path d="M200 200 C190 188 182 165 190 145 C195 132 205 140 200 160"/>
+    <path d="M200 200 C210 188 218 165 210 145 C205 132 195 140 200 160"/>
+    <path d="M172 182 C165 162 163 142 175 132"/>
+    <path d="M228 182 C235 162 237 142 225 132"/>
+  </g>
+  <path d="M148 95 H252 L148 215 H252" fill="none" stroke="#4a2c5a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="200" y="330" text-anchor="middle" font-family="Georgia, Times, serif" font-size="48" font-weight="600" fill="#4a2c5a" letter-spacing="0.14em">ZARH</text>
+  <line x1="125" y1="352" x2="178" y2="352" stroke="#c9a96e" stroke-width="1.4"/>
+  <circle cx="200" cy="352" r="2.8" fill="#c9a96e"/>
+  <line x1="222" y1="352" x2="275" y2="352" stroke="#c9a96e" stroke-width="1.4"/>
+  <text x="200" y="380" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#c9a96e" letter-spacing="0.3em">WELLNESS LOUNGE</text>
+</svg>
