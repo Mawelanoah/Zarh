@@ -1,4 +1,4 @@
-/* Zarh Wellness Lounge - interactions + Booking Assistant */
+/* Zarh Wellness Lounge — interactions + Booking Assistant */
 
 (function () {
   "use strict";
